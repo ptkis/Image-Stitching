@@ -16,11 +16,11 @@ class featureExtactor:
         """
 
         if method == 'sift':
-            descriptor = cv2.xfeatures2d.SIFT_create()
+            descriptor = cv2.SIFT_create()
         elif method == 'surf':
-            descriptor = cv2.xfeatures2d_SURF.create(hessianThreshold=self.minHessian)
+            descriptor = cv2.SURF.create(hessianThreshold=self.minHessian)
         elif method =='brisk':
-            descriptor = cv2.xfeatures2d.BRISK_create()  
+            descriptor = cv2.BRISK_create()  
         elif method == 'orb':
             descriptor = cv2.ORB_create()
 

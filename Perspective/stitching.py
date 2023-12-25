@@ -199,7 +199,7 @@ class warpAndStich:
                 x, y = np.mgrid[:panorama_size[0], :panorama_size[1]]
                 coors=np.hstack((x.reshape(-1, 1), y.reshape(-1,1))) # coors.shape is (4000000,2)
                 mask = poly_path.contains_points(coors)
-                mask = np.reshape(mask, (panorama_size[0], panorama_size[1]),-1)
+                mask = np.reshape(mask, (panorama_size[0], panorama_size[1]))
 
                 masks.append(np.stack([mask.astype('float32'), mask.astype('float32'), mask.astype('float32')], -1))
             else:
